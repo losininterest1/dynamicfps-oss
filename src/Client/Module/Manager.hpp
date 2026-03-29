@@ -6,6 +6,7 @@
 #include "Modules/Module.hpp"
 #include "ModuleState.hpp"
 #include "../Events/Listener.hpp"
+#include "Modules/Misc/DynamicFPS/DynamicFPS.hpp"
 
 // TODO make moduleMap AND modules but use moduleMap for search
 namespace ModuleManager {
