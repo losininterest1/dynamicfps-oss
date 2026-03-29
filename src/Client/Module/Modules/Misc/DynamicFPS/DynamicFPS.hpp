@@ -1,7 +1,7 @@
-// Updated 12:49 UTC+8 by Leqixn
+// Updated 12:54 UTC+8 by Leqixn
 
 #pragma once
-#include "../../../Module.h"
+#include "../../../Module.hpp"
 #include <optional>
 
 class DynamicFPS : public Module {
