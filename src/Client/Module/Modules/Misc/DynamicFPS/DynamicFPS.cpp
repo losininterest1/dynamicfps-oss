@@ -1,4 +1,4 @@
-// Updated 1:09 UTC+8 by Leqixn
+// Updated 1:20 UTC+8 by Leqixn
 
 #include "DynamicFPS.hpp"
 #include "../../../../../SDK/SDK.hpp"
@@ -50,4 +50,12 @@ bool DynamicFPS::isAFK() const {
 void DynamicFPS::onDisable() {
     if (isThrottled && originalLimit.has_value()) {
         auto context = GameContext::getInstance();
-        if (context && context->
+        if (context && context->getClientInstance()) {
+            auto options = context->getClientInstance()->getOptions();
+            if (options) {
+                options->framerateLimit = originalLimit.value();
+            }
+        }
+    }
+    isThrottled = false;
+}
