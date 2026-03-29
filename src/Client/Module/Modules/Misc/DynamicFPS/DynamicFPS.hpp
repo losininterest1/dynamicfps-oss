@@ -1,7 +1,7 @@
 // Updated 1:22 UTC+8 by Leqixn
 
 #pragma once
-#include "../../../Module.hpp"
+#include "src/Client/Module/Module.hpp"
 #include <optional>
 
 class DynamicFPS : public Module {
